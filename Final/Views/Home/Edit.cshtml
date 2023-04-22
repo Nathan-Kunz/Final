@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Entertainers
+<h2>Edit Entertainer</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <input type="hidden" asp-for="EntertainerId" />
+        <label asp-for="EntStageName">Entertainer Stage Name:</label>
+        <input asp-for="EntStageName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EntStreetAddress">Street Address:</label>
+        <input asp-for="EntStreetAddress" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EntCity">City:</label>
+        <input asp-for="EntCity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EntState">State:</label>
+        <input asp-for="EntState" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EntZipCode">Zip Code:</label>
+        <input asp-for="EntZipCode" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EntWebPage">Web Page:</label>
+        <input asp-for="EntWebPage" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EntEmailAddress">Email Address:</label>
+        <input asp-for="EntEmailAddress" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EntPhoneNumber">Phone Number:</label>
+        <input asp-for="EntPhoneNumber" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Details" asp-route-id="@Model.EntertainerId" class="btn btn-secondary">Cancel</a>
+</form>

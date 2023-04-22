@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Entertainers
+
+
+<h1>@Model.EntStageName</h1>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td>Entertainer ID:</td>
+            <td>@Model.EntertainerId</td>
+        </tr>
+        <tr>
+            <td>Entertainer Stage Name:</td>
+            <td>@Model.EntStageName</td>
+        </tr>
+        <tr>
+            <td>Entertainer Street Address:</td>
+            <td>@Model.EntStreetAddress</td>
+        </tr>
+        <tr>
+            <td>Entertainer City:</td>
+            <td>@Model.EntCity</td>
+        </tr>
+        <tr>
+            <td>Entertainer State:</td>
+            <td>@Model.EntState</td>
+        </tr>
+        <tr>
+            <td>Entertainer Zip Code:</td>
+            <td>@Model.EntZipCode</td>
+        </tr>
+        <tr>
+            <td>Entertainer Phone Number:</td>
+            <td>@Model.EntPhoneNumber</td>
+        </tr>
+        <tr>
+            <td>Entertainer Email Address:</td>
+            <td>@Model.EntEmailAddress</td>
+        </tr>
+        <tr>
+            <td>Entertainer Web Page:</td>
+            <td>@Model.EntWebPage</td>
+        </tr>
+    </tbody>
+</table>
+
+<a asp-action="Edit" asp-route-id="@Model.EntertainerId" class="btn btn-primary">Edit</a>
+<a asp-action="Delete" asp-route-id="@Model.EntertainerId" class="btn btn-danger">Delete</a>

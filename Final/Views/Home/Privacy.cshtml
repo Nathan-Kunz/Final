@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Entertainers";
+}
+@model List<Entertainers>
+<h1>@ViewData["Title"]</h1>
+
+<p>Here is a list of all the entertainers.</p>
+<p>to see all the info click details</p>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Ent Stage name</th>
+            
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    @foreach (Entertainers b in Model)
+    {
+<tr>
+    <td>@b.EntStageName</td>
+
+    <td>@b.EntPhoneNumber</td>
+
+    <td><a href="@Url.Action("Details", "Home", new { id = b.EntertainerId })" class="btn btn-primary">Details</a></td>
+
+</tr>
+    }
+</table>
+
